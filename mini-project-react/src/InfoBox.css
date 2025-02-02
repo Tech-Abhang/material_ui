@@ -1,0 +1,12 @@
+.InfoBox{
+    color: white;
+}
+
+.card_content{
+    text-align: center;
+}
+
+.card{
+    display:flex;
+    justify-content: center;
+}

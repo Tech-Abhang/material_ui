@@ -12,6 +12,16 @@ export default function SearchBox(){
         let responce = await fetch(`${api_url}?q=${city}&appid=${api_keys}`);
         let jsonResponce = await responce.json();
         console.log(jsonResponce);
+        let result ={
+            city: city,
+            temp: jsonResponce.main.temp,
+            tempMin : jsonResponce.main.temp_min,
+            tempMax : jsonResponce.main.temp_max,
+            humidity : jsonResponce.main.humidity,
+            feelsLike : jsonResponce.main.feels_like,
+            weather : jsonResponce.weather[0].description,
+        }
+        console.log(result)
     }
 
     let handleChange = (evt) => {
